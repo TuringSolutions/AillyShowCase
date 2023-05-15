@@ -1,0 +1,32 @@
+<script setup lang="ts">
+defineProps<{
+  faqs: Array<{
+    question: string;
+    answer: string;
+  }>;
+}>();
+</script>
+
+<template>
+  <div>
+    <h2 class="pb-6 text-center text-2xl 2xl:text-3xl">
+      Frequently Asked Questions
+    </h2>
+    <p class="text-md text-center xl:text-lg 2xl:text-xl">
+      Can't find your question here? Reach out to
+      <span>
+        <router-link to="/support">our support team!</router-link>
+      </span>
+    </p>
+  </div>
+  <div>
+    <ul>
+      <li v-for="qa in faqs" :key="qa.question" class="list-inside list-disc">
+        <span class="text-md xl:text-lg 2xl:text-xl">
+          {{ qa.question }}
+        </span>
+        <p v-html="qa.answer" class="text-md xl:text-lg 2xl:text-xl"></p>
+      </li>
+    </ul>
+  </div>
+</template>

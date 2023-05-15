@@ -1,0 +1,14 @@
+.h-fullscreen{
+    height: 100vh;
+    height: 100dvh;
+}
+
+.h-halfscreen{
+    height: 50vh;
+    height: 50dvh;
+}
+
+.h-twothirdscreen{
+    height: 66vh;
+    height: 66dvh;
+}
