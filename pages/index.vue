@@ -16,14 +16,6 @@ import {
 
 let currentAWSUseCase = ref<AWSUseCase>(AWSUseCases[0]);
 const logoColor = "#91f2e8";
-
-let useCaseSubtitle = ref<string>("  ");
-
-const removeUseCaseSubtitle = () => (useCaseSubtitle.value = "");
-const setUseCaseSubtitle = (title: string) =>
-  (useCaseSubtitle.value = UseCases.filter(
-    (x) => x.title == title
-  )[0].subtitle);
 </script>
 
 <template>
@@ -45,8 +37,6 @@ const setUseCaseSubtitle = (title: string) =>
             :erasing-speed="50"
             :repeat-pause-delay="2000"
             class="bg-accent text-xl text-custom-white xl:text-3xl 2xl:text-4xl py-2"
-            
-            @typing-started="setUseCaseSubtitle"
           />
         </div>
         <!-- <div class="h-16">

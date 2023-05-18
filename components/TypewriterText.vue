@@ -11,7 +11,7 @@ const emit = defineEmits<{
   (e: "eraseStarted"): void;
 }>();
 
-let typedValue = ref<string>("");
+let typedValue = ref<string>(props.displayTextArray[0]);
 let typeStatus = ref(false);
 let displayTextArrayIndex = ref(0);
 let displayText = computed(
