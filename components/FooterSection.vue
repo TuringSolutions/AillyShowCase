@@ -4,35 +4,35 @@
   >
     <div class="flex flex-col">
       <div class="font-bold uppercase underline">Expertise and Services</div>
-      <router-link to=""><div class="footer-link">Data Science & AI</div></router-link>
-      <router-link to=""><div>Machine Learning</div></router-link>
-      <router-link to="/services/softwaredev"
-        ><div>AI Software Development</div></router-link
+      <nuxt-link to=""><div class="footer-link">Data Science & AI</div></nuxt-link>
+      <nuxt-link to=""><div>Machine Learning</div></nuxt-link>
+      <nuxt-link to="/services/softwaredev"
+        ><div>AI Software Development</div></nuxt-link
       >
-      <router-link to=""><div>AI Mobile Apps Development</div></router-link>
-      <router-link to=""><div>Natural Language Processing</div></router-link>
-      <router-link to=""><div>Data Capture & OCR</div></router-link>
+      <nuxt-link to=""><div>AI Mobile Apps Development</div></nuxt-link>
+      <nuxt-link to=""><div>Natural Language Processing</div></nuxt-link>
+      <nuxt-link to=""><div>Data Capture & OCR</div></nuxt-link>
     </div>
     <div class="flex flex-col">
-      <router-link to="">
+      <nuxt-link to="">
         <div class="font-bold uppercase underline">
           Big Data Solutions
-        </div></router-link
+        </div></nuxt-link
       >
-      <router-link to=""><div>Big Data Development</div></router-link>
-      <router-link to=""><div>Data Architecture Engineering</div></router-link>
-      <router-link to=""><div>Data Warehouse Engineering</div></router-link>
-      <router-link to=""><div>BI & Data Visualizations</div></router-link>
-      <router-link to=""><div>Predictive Analysis</div></router-link>
-      <router-link to=""><div>Cloud Services</div></router-link>
+      <nuxt-link to=""><div>Big Data Development</div></nuxt-link>
+      <nuxt-link to=""><div>Data Architecture Engineering</div></nuxt-link>
+      <nuxt-link to=""><div>Data Warehouse Engineering</div></nuxt-link>
+      <nuxt-link to=""><div>BI & Data Visualizations</div></nuxt-link>
+      <nuxt-link to=""><div>Predictive Analysis</div></nuxt-link>
+      <nuxt-link to=""><div>Cloud Services</div></nuxt-link>
     </div>
     <div class="flex flex-col">
       <div class="font-bold uppercase underline">About Us</div>
-      <router-link to=""><div>Success Stories</div></router-link>
-      <router-link to=""><div>Blog</div></router-link>
-      <router-link to=""><div>Write to Us</div></router-link>
-      <router-link to=""><div>About</div></router-link>
-      <router-link to=""><div>Careers</div></router-link>
+      <nuxt-link to=""><div>Success Stories</div></nuxt-link>
+      <nuxt-link to=""><div>Blog</div></nuxt-link>
+      <nuxt-link to=""><div>Write to Us</div></nuxt-link>
+      <nuxt-link to=""><div>About</div></nuxt-link>
+      <nuxt-link to=""><div>Careers</div></nuxt-link>
     </div>
     <div class="flex flex-col xl:items-end">
       <div class="flex flex-row"></div>

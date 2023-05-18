@@ -2,7 +2,7 @@ interface NavItem {
   id: string;
   description: string;
   logo: string;
-  url: string;
+  url?: string;
   children?: Array<NavItem>;
 }
 
@@ -17,7 +17,6 @@ const NavItems: Array<NavItem> = [
     id: "Services",
     description: "",
     logo: "",
-    url: "/services",
     children: [
       {
         id: "Computer Vision",

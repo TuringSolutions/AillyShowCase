@@ -14,11 +14,11 @@ import { UserCircleIcon } from "@heroicons/vue/20/solid";
 
   <ResponsiveSection>
     <h2 class="pb-8 text-center text-2xl 2xl:pb-16 2xl:text-3xl">
-      Established in 2014
+      Established in 2019
     </h2>
     <div class="flex flex-col items-center justify-center gap-4 xl:flex-row">
       <p class="text-md text-center xl:text-lg 2xl:text-xl">
-        Our firm was founded in 20xx by John Doe, who brought years of
+        Our firm was founded in 2019 by John Doe, who brought years of
         experience in big data analytics to a new venture to make it a success.
       </p>
       <div class="flex flex-col items-center">

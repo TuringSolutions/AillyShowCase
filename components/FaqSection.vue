@@ -15,7 +15,7 @@ defineProps<{
     <p class="text-md text-center xl:text-lg 2xl:text-xl">
       Can't find your question here? Reach out to
       <span>
-        <router-link to="/support">our support team!</router-link>
+        <nuxt-link to="/support">our support team!</nuxt-link>
       </span>
     </p>
   </div>

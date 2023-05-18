@@ -8,7 +8,7 @@ import { expertises, benefits, useCases, FAQs } from "@/data/services/CVData";
         <p class="text-xl xl:text-3xl max-w-5xl">
           Add value to your business with our ML algorithms for reliable
           computer vision solutions with image analysis, object detection and
-          video analysis.
+          video analysis
         </p>
   </hero-section>
 
@@ -27,13 +27,14 @@ import { expertises, benefits, useCases, FAQs } from "@/data/services/CVData";
 
   <responsive-section>
     <h2 class="text-center text-2xl pb-8 2xl:pb-16 2xl:text-3xl">Computer Vision Expertise</h2>
-    <p class="text-md xl:text-lg 2xl:text-xl">
+    <p class="text-md xl:text-lg 2xl:text-xl text-center">
       Our computer vision software development team builds custom solutions for
       varied use cases
     </p>
-    <ul class="grid">
+    <ul class="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 gap-6 py-12 max-w-7xl mx-auto">
       <li v-for="expertise in expertises" :key="expertise.title">
-        <h3>
+        <component :is="expertise.svg" v-if="expertise.svg != ''" class="w-16 h-16 mx-auto text-primary"></component>
+        <h3 class="text-lg xl:text-xl 2xl:text-2xl text-center">
           {{ expertise.title }}
         </h3>
         <p class="text-md xl:text-lg 2xl:text-xl">
@@ -47,7 +48,7 @@ import { expertises, benefits, useCases, FAQs } from "@/data/services/CVData";
     <h2 class="text-center text-2xl pb-8 2xl:pb-16 2xl:text-3xl">Benefits</h2>
     <ul class="grid">
       <li v-for="benefit in benefits" :key="benefit.title">
-        <h3>
+        <h3 class="text-lg xl:text-xl 2xl:text-2xl text-center">
           {{ benefit.title }}
         </h3>
         <p class="text-md xl:text-lg 2xl:text-xl">
@@ -64,7 +65,7 @@ import { expertises, benefits, useCases, FAQs } from "@/data/services/CVData";
   </responsive-section>
 
   <responsive-section>
-    <ul>
+    <ul class="flex flex-col gap-6">
       <li
         v-for="useCase in useCases"
         :key="useCase.title"
@@ -72,9 +73,9 @@ import { expertises, benefits, useCases, FAQs } from "@/data/services/CVData";
       >
         <div></div>
         <div>
-          <h2 class="text-center text-2xl pb-8 2xl:pb-16 2xl:text-3xl">
+          <h3 class="text-lg xl:text-xl 2xl:text-2xl text-center">
             {{ useCase.title }}
-          </h2>
+          </h3>
           <p class="text-md xl:text-lg 2xl:text-xl">
             {{ useCase.body }}
           </p>

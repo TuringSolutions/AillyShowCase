@@ -1,33 +1,33 @@
-const expertises: Array<{ title: string; body: string; svgLink: string }> = [
+const expertises: Array<{ title: string; body: string; svg: string }> = [
     {
       title: "Object Detection, Tracking and Labeling",
       body: "We extract insights from visual data for various needs: medical image processing, virtual try-ons, visual search, etc.",
-      svgLink: "",
+      svg: "object-detection",
     },
     {
       title: "Recommender Systems Based on Visual Search",
       body: "Recommender systems for personalized offers and increased customer engagement and loyalty.",
-      svgLink: "",
+      svg: "recommender",
     },
     {
       title: "Visual Inspection for Defect Detection",
       body: "Automated visual inspection solutions to look for defects on the production line and cargo damage detection.",
-      svgLink: "",
+      svg: "defect-finder",
     },
     {
       title: "OCR & Data Capture",
       body: "Custom data capture and extraction solutions developed for document process automation.",
-      svgLink: "",
+      svg: "doc-scanner",
     },
     {
       title: "Pose Estimation",
       body: "Solutions to track and analyze human movement and activity, and give feedback on user’s workouts.",
-      svgLink: "",
+      svg: "pose",
     },
     {
       title: "Video Analysis for Automated Surveillance",
       body: "We develop video analytics solutions for violent behavior detection in real time.",
-      svgLink: "",
+      svg: "video-analysis",
     },
   ];
   

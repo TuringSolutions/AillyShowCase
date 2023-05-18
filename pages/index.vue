@@ -45,11 +45,11 @@ const setUseCaseSubtitle = (title: string) =>
             :erasing-speed="50"
             :repeat-pause-delay="2000"
             class="bg-accent text-xl text-custom-white xl:text-3xl 2xl:text-4xl py-2"
-            @erase-started="removeUseCaseSubtitle"
+            
             @typing-started="setUseCaseSubtitle"
           />
         </div>
-        <div class="h-16">
+        <!-- <div class="h-16">
           <TransitionGroup
           enter-from-class="opacity-0"
           enter-leave-class="opacity-100"
@@ -59,7 +59,7 @@ const setUseCaseSubtitle = (title: string) =>
             {{ useCaseSubtitle }}
           </p>
         </TransitionGroup>
-        </div>
+        </div> -->
         
       </div>
     </div>
