@@ -41,7 +41,7 @@ const setUseCaseSubtitle = (title: string) =>
           </span>
           <TypewriterText
             :display-text-array="UseCases.map(x => (x as IUseCase).title)"
-            :typing-speed="100"
+            :typing-speed="50"
             :erasing-speed="50"
             :repeat-pause-delay="2000"
             class="bg-accent text-xl text-custom-white xl:text-3xl 2xl:text-4xl py-2"
