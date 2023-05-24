@@ -79,7 +79,7 @@ let currentDevelopmentProcess = ref<{
         
       </li>
     </ul>
-    <ul class="max-w-7xl md:mx-auto md:h-48 p-2 border-l-2 border-accent md:border-none w-full md:w-auto">
+    <ul class="max-w-7xl md:mx-auto md:h-48 p-2 md:pt-6 border-l-2 border-accent md:border-none w-full md:w-auto">
       <li
         v-for="task in currentDevelopmentProcess?.tasks"
         :key="task"
@@ -98,7 +98,7 @@ let currentDevelopmentProcess = ref<{
     </div>
   </responsive-section>
 
-  <responsive-section class="bg-custom-black text-custom-white">
+  <responsive-section>
     <h2 class="pb-8 text-center text-2xl 2xl:pb-16 2xl:text-3xl">Industries</h2>
     <p class="text-md pb-12 text-center xl:text-lg 2xl:text-xl">
       We have proven track records of helping businesses in different niches to

@@ -31,13 +31,13 @@ import { expertises, benefits, useCases, FAQs } from "@/data/services/CVData";
       Our computer vision software development team builds custom solutions for
       varied use cases
     </p>
-    <ul class="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 gap-6 py-12 max-w-7xl mx-auto">
-      <li v-for="expertise in expertises" :key="expertise.title">
+    <ul class="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-x-12 py-12 max-w-7xl mx-auto">
+      <li v-for="expertise in expertises" :key="expertise.title" class="flex flex-col items-center justify-center">
         <component :is="expertise.svg" v-if="expertise.svg != ''" class="w-16 h-16 mx-auto text-primary"></component>
         <h3 class="text-lg xl:text-xl 2xl:text-2xl text-center">
           {{ expertise.title }}
         </h3>
-        <p class="text-md xl:text-lg 2xl:text-xl">
+        <p class="text-md xl:text-lg 2xl:text-xl text-justify">
           {{ expertise.body }}
         </p>
       </li>
@@ -46,17 +46,17 @@ import { expertises, benefits, useCases, FAQs } from "@/data/services/CVData";
 
   <responsive-section>
     <h2 class="text-center text-2xl pb-8 2xl:pb-16 2xl:text-3xl">Benefits</h2>
-    <ul class="grid">
+    <ul class="grid gap-6 max-w-7xl mx-auto">
       <li v-for="benefit in benefits" :key="benefit.title">
-        <h3 class="text-lg xl:text-xl 2xl:text-2xl text-center">
+        <h3 class="text-lg xl:text-xl 2xl:text-2xl text-center uppercase">
           {{ benefit.title }}
         </h3>
         <p class="text-md xl:text-lg 2xl:text-xl">
           {{ benefit.body }}
         </p>
-        <h4>Key Benefits:</h4>
-        <ul>
-          <li v-for="subBenefit in benefit.subBenefits" :key="subBenefit">
+        <h4 class="text-md xl:text-lg 2xl:text-xl font-medium text-center">Key Benefits:</h4>
+        <ul class="flex flex-col items-center">
+          <li v-for="subBenefit in benefit.subBenefits" :key="subBenefit" class="text-md xl:text-lg 2xl:text-xl list-disc list-inside">
             {{ subBenefit }}
           </li>
         </ul>
@@ -65,21 +65,20 @@ import { expertises, benefits, useCases, FAQs } from "@/data/services/CVData";
   </responsive-section>
 
   <responsive-section>
-    <ul class="flex flex-col gap-6">
+    <h2 class="text-center text-2xl pb-8 2xl:pb-16 2xl:text-3xl">Use Cases</h2>
+    <ul class="flex flex-col gap-12 xl:grid xl:grid-cols-2 max-w-7xl mx-auto">
       <li
         v-for="useCase in useCases"
         :key="useCase.title"
-        class="flex flex-row"
+        class="flex flex-col"
       >
-        <div></div>
-        <div>
-          <h3 class="text-lg xl:text-xl 2xl:text-2xl text-center">
+        
+          <h3 class="text-lg xl:text-xl uppercase font-medium text-center">
             {{ useCase.title }}
           </h3>
           <p class="text-md xl:text-lg 2xl:text-xl">
             {{ useCase.body }}
           </p>
-        </div>
       </li>
     </ul>
   </responsive-section>

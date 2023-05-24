@@ -173,6 +173,12 @@ const Industries : Array<{title: string, body: string, url: string, icon: string
     body: "Optimize your processes and improve internal safety and security through custom AI solutions and data science services.",
     url: "",
     icon: "cash-coin"
+  },
+  {
+    title: "Non on this list?",
+    body: "We are always expanding our reach to newer industries, and honestly, this list cannot keep up. Contact us for a free consultation to know if we can help with a project from your industry. ",
+    url: "",
+    icon: "plus-circle"
   }
 ]
 

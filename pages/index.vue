@@ -36,21 +36,9 @@ const logoColor = "#91f2e8";
             :typing-speed="50"
             :erasing-speed="50"
             :repeat-pause-delay="2000"
-            class="bg-accent text-xl text-custom-white xl:text-3xl 2xl:text-4xl py-2"
+            class="bg-accent py-2 text-xl text-custom-white xl:text-3xl 2xl:text-4xl"
           />
         </div>
-        <!-- <div class="h-16">
-          <TransitionGroup
-          enter-from-class="opacity-0"
-          enter-leave-class="opacity-100"
-          enter-active-class="transition-opacity duration-2000"
-        >
-          <p class="py-4 text-lg xl:text-xl 2xl:text-2xl" v-if="useCaseSubtitle != ''">
-            {{ useCaseSubtitle }}
-          </p>
-        </TransitionGroup>
-        </div> -->
-        
       </div>
     </div>
     <custom-button
@@ -84,23 +72,24 @@ const logoColor = "#91f2e8";
     </ul>
   </ResponsiveSection>
 
-  <ResponsiveSection>
+  <ResponsiveSection class="bg-custom-white">
     <h2 class="pb-8 text-center text-2xl 2xl:pb-16 2xl:text-3xl">
       How we can help you
     </h2>
     <ul
-      class="grid items-center justify-center gap-6 text-center 2xl:grid-cols-2"
+      class="grid items-center justify-center gap-0.5 bg-primary text-center drop-shadow 2xl:grid-cols-2"
     >
       <li
         v-for="helpCase in HelpCases"
         :key="helpCase.caseTitle"
-        class="group relative overflow-hidden p-10 outline outline-1"
+        class="group relative h-full overflow-hidden bg-custom-white p-10"
       >
         <brand-logo
-          class="absolute right-0 top-0 h-24 w-24 transition-transform group-hover:scale-125"
-          logo-color="#dddddd"
+          class="absolute right-0 top-0 -z-10 h-16 w-16 text-slate-300 drop-shadow md:h-20 md:w-20 xl:transition-transform xl:group-hover:scale-125 xl:group-hover:text-gray-400 xl:group-hover:opacity-75"
         />
-        <h3 class="pb-6 text-lg xl:text-xl 2xl:text-2xl">
+        <h3
+          class="pb-6 text-lg font-medium uppercase xl:text-xl xl:font-normal 2xl:text-2xl"
+        >
           {{ helpCase.caseTitle }}
         </h3>
         <p class="text-md pb-6 xl:text-lg 2xl:text-xl">
@@ -115,7 +104,7 @@ const logoColor = "#91f2e8";
     </ul>
   </ResponsiveSection>
 
-  <ResponsiveSection>
+  <ResponsiveSection class="bg-white drop-shadow">
     <p class="text-md text-center xl:text-lg 2xl:text-xl">
       We welcome opportunities to work alongside different teams on projects of
       any complexity. Working together, we will develop new systems, solutions,
@@ -196,7 +185,7 @@ const logoColor = "#91f2e8";
     </div>
   </ResponsiveSection>
 
-  <ResponsiveSection>
+  <ResponsiveSection class="bg-white drop-shadow">
     <h2 class="pb-8 text-center text-2xl 2xl:pb-16 2xl:text-3xl">
       Our Mission
     </h2>
@@ -213,39 +202,57 @@ const logoColor = "#91f2e8";
     </p>
   </ResponsiveSection>
 
-  <ResponsiveSection>
-    <h2 class="pb-8 text-center text-2xl 2xl:pb-16 2xl:text-3xl">Industries we are transforming</h2>
-    <p class="text-md xl:text-lg 2xl:text-xl text-center">
+  <ResponsiveSection class="bg-custom-white">
+    <h2 class="pb-8 text-center text-2xl 2xl:pb-16 2xl:text-3xl">
+      Industries we are transforming
+    </h2>
+    <p class="text-md text-center xl:text-lg 2xl:text-xl mx-auto">
       Take a look at examples of our work and learn how our clients from
       different industries have benefited from our data science consulting
       services.
     </p>
 
-    <ul class="flex flex-col gap-6 max-w-7xl mx-auto py-6">
-      <li v-for="industry in Industries" :key="industry.title" class="flex flex-row items-center gap-6">
+    <ul class="mx-auto flex max-w-7xl flex-col gap-6 py-6 md:hidden">
+      <li
+        v-for="industry in Industries"
+        :key="industry.title"
+        class="flex flex-row items-center gap-6"
+      >
         <div>
-          <component :is="industry.icon" class="w-8 h-8"/>
+          <component :is="industry.icon" class="h-8 w-8 text-primary" />
         </div>
         <div>
-          <h3 class="text-md xl:text-lg 2xl:text-xl font-medium">{{ industry.title }}</h3>
+          <h3 class="text-md font-medium xl:text-lg 2xl:text-xl">
+            {{ industry.title }}
+          </h3>
           <p class="text-md xl:text-lg">{{ industry.body }}</p>
         </div>
       </li>
     </ul>
 
-    <ul class="md:grid md:grid-cols-2 max-w-7xl mx-auto md:gap-x-16 md:gap-y-6 py-6">
-      <li v-for="industry in Industries" :key="industry.title">
-        <component :is="industry.icon" class="w-12 h-12 mx-auto px-2"/>
-        <h3 class="text-center text-md xl:text-lg 2xl:text-xl font-medium">{{ industry.title }}</h3>
-        <p class="text-justify text-md xl:text-lg 2xl:text-xl">{{ industry.body }}</p>
-      </li>
-      <li class="col-span-2">
-        <component is="plus-circle" class="w-12 h-12 mx-auto px-2" />
-        <h3 class="text-center text-md xl:text-lg 2xl:text-xl font-medium">Not on this list?</h3>
-        <p class="text-md xl:text-lg 2xl:text-xl xl:text-center">
-          We are always expanding our reach to newer industries, and honestly,
-          this list cannot keep up. Contact us for a free consultation to know
-          if we can help with a project from your industry.
+    <ul
+      class="mx-auto hidden my-6 md:grid md:grid-cols-2 md:gap-0.5 md:bg-primary md:drop-shadow"
+    >
+      <li
+        v-for="(industry, index) in Industries"
+        :key="industry.title"
+        :class="index == Industries.length - 1 ? 'col-span-2' : ''"
+        class="px-8 py-3 bg-custom-white"
+      >
+        <component
+          :is="industry.icon"
+          class="mx-auto h-12 w-12 p-2 text-primary"
+        />
+        <h3 class="text-md text-center font-medium xl:text-lg 2xl:text-xl">
+          {{ industry.title }}
+        </h3>
+        <p
+          class="text-md xl:text-lg 2xl:text-xl"
+          :class="
+            index == Industries.length - 1 ? 'text-center' : 'text-justify'
+          "
+        >
+          {{ industry.body }}
         </p>
       </li>
     </ul>

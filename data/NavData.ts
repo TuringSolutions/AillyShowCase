@@ -14,7 +14,7 @@ const NavItems: Array<NavItem> = [
     url: "/",
   },
   {
-    id: "Services",
+    id: "AI Services",
     description: "",
     logo: "",
     children: [
@@ -31,6 +31,17 @@ const NavItems: Array<NavItem> = [
         url: "/services/softwaredev",
       },
     ],
+  },
+  {
+    id: "General Services",
+    description: "",
+    logo: "",
+    children: [
+      {id: "Web Development",
+    description: "",
+  logo: "",
+url: "/services/webdev"}
+    ]
   },
   {
     id: "About Us",
