@@ -66,52 +66,54 @@ const expertises: Array<{ title: string; body: string; svg: string }> = [
     },
   ];
   
-  const useCases: Array<{ title: string; body: string; imgUrl: string }> = [
+  const useCases: Array<{ title: string; htmlBody: string; imgUrl: string }> = [
     {
       title: "Adopt Multi-Object Detection Models for Automatic Image Tagging",
-      body: "We use convolutional neural networks to teach machines what different objects look like and train algorithms to automatically identify people and objects in the picture.Multi-object detection can be a great asset for E-commerce organizations and social media platforms. It can be used to enhance the customer experience in retail, logistics, and supply chain.",
+      htmlBody: "We use convolutional neural networks to teach machines what different objects look like and train algorithms to automatically identify people and objects in the picture.Multi-object detection can be a great asset for E-commerce organizations and social media platforms. It can be used to enhance the customer experience in retail, logistics, and supply chain.",
       imgUrl: "",
     },
     {
       title:
         "Extract More Insights from Visual Data with Image Segmentation Models",
-      body: "Image segmentation splits an image into meaningful parts to make it easier for machines to understand, process, and analyze. Image segmentation can be widely applied for object tracking, medical image processing, face recognition, and more.",
+      htmlBody: "Image segmentation splits an image into meaningful parts to make it easier for machines to understand, process, and analyze. Image segmentation can be widely applied for object tracking, medical image processing, face recognition, and more.",
       imgUrl: "",
     },
     {
       title: "Provide Better Experiences with Our Pose Estimation Model",
-      body: "Human pose estimation is one of the most burning issues in today’s computer vision community. Our team is ready to aid you with a pose estimation model that can be implemented into your app or any other 3rd party tool. It’s aimed to predict, identify, and track the presence and location of a person and their movement to help you provide better services. This functionality will empower: Crowd counting and tracking systems, AR experiences (ex. AI-powered coaches), Gaming and entertainment, Robotics",
+      htmlBody: "Human pose estimation is one of the most burning issues in today’s computer vision community. Our team is ready to aid you with a pose estimation model that can be implemented into your app or any other 3rd party tool. It’s aimed to predict, identify, and track the presence and location of a person and their movement to help you provide better services. This functionality will empower: Crowd counting and tracking systems, AR experiences (ex. AI-powered coaches), Gaming and entertainment, Robotics",
       imgUrl: "",
     },
     {
       title: "Automate Manual and Repetitive Tasks with OCR & Data Capturing",
-      body: "Businesses deal with big data on a daily basis, and the volume is growing exponentially. Services such as data capture, retrieval, and extraction have become integral parts of organizations' workflows. We deliver high-end computer vision solutions to find, capture, and extract data automatically from unstructured documents and cut down on manual operations.",
+      htmlBody: "Businesses deal with big data on a daily basis, and the volume is growing exponentially. Services such as data capture, retrieval, and extraction have become integral parts of organizations' workflows. We deliver high-end computer vision solutions to find, capture, and extract data automatically from unstructured documents and cut down on manual operations.",
       imgUrl: "",
     },
     {
       title:
         "Use Product Matching and Provide Accurate Recommendations with Image Similarity Search",
-      body: "Image similarity search allows customers to quickly find similar products based on visual attributes such as color, shape, texture, etc, across the web. This technology is becoming increasingly important in the era of big data that businesses exploit for growth. We will help you implement the product-matching and recommendation technology to tackle massive amounts of unstructured data more efficiently, increase ROI, prevent cost overruns, and add value to your work.",
+      htmlBody: "Image similarity search allows customers to quickly find similar products based on visual attributes such as color, shape, texture, etc, across the web. This technology is becoming increasingly important in the era of big data that businesses exploit for growth. We will help you implement the product-matching and recommendation technology to tackle massive amounts of unstructured data more efficiently, increase ROI, prevent cost overruns, and add value to your work.",
       imgUrl: "",
     },
     {
       title: "Create Unique Content with Generative Adversarial Network (GAN)",
-      body: "Animation, entertainment and other visual content creation industries can benefit from GAN to generate creative interpretations of data. It can change sketches into realistic scenes, synthesize characters or scenes similar to the original ones, autocorrect artifacts in drawings, simulate and animate body physics, and generate 3D objects from pictures. GAN is used for images to Enhance – restore quality, correct the color and lighting, upsample or remove background. Stylize – change the way the image is painted, borrowing from visual artists and styles. Transform – make your users look younger or older, or maybe even zombies or athletes. Generate – build your own portfolio of concept arts, designs or even imagined humans. Visualize – paint a realistic (or not really) picture from the textual description. Edit – vary poses, clothing and facial features such as smiles, eyes, noses or hair.",
+      htmlBody: "Animation, entertainment and other visual content creation industries can benefit from GAN to generate creative interpretations of data. It can change sketches into realistic scenes, synthesize characters or scenes similar to the original ones, autocorrect artifacts in drawings, simulate and animate body physics, and generate 3D objects from pictures. ",
       imgUrl: "",
     },
     {
       title:
         "Boost Brand Visibility with Logo Detection & Brand Monitoring Solution",
-      body: "Object detection algorithms facilitate specifying object presence and location in an image, based on the set of categories used to train a custom algorithm. We assist organizations and individuals by delivering machine learning-based logo detection systems. Our solutions help automate real-time recognition of brand logos in an image or in broadcast video streams and show accurate brand visibility analytics.",
+      htmlBody: "Object detection algorithms facilitate specifying object presence and location in an image, based on the set of categories used to train a custom algorithm. We assist organizations and individuals by delivering machine learning-based logo detection systems. Our solutions help automate real-time recognition of brand logos in an image or in broadcast video streams and show accurate brand visibility analytics.",
       imgUrl: "",
     },
     {
       title: "Harness Big Data with Object Segmentation in 3D Point Clouds",
-      body: "Point clouds are used in 3D modeling to generate accurate models of real-world items or scenes. This technology is in high demand for computer graphics, VR, and communication. Our computer vision developers and infrastructure architects will help you generate immersive 3D models of the physical world easily and with great speed.",
+      htmlBody: "Point clouds are used in 3D modeling to generate accurate models of real-world items or scenes. This technology is in high demand for computer graphics, VR, and communication. Our computer vision developers and infrastructure architects will help you generate immersive 3D models of the physical world easily and with great speed.",
       imgUrl: "",
     },
   ];
   
+  const usesOfGAN= "GAN is used for images to Enhance - restore quality, correct the color and lighting, upsample or remove background. Stylize - change the way the image is painted, borrowing from visual artists and styles.</li> <li>Transform - make your users look younger or older, or maybe even zombies or athletes.</li> <li>Generate - build your own portfolio of concept arts, designs or even imagined humans.</li> <li>Visualize - paint a realistic (or not really) picture from the textual description.</li> <li>Edit - vary poses, clothing and facial features such as smiles, eyes, noses or hair.</li>"
+
   const FAQs: Array<{ question: string; answer: string; }> = [
     {
       question: "How much does a typical computer vision project cost? ",

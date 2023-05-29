@@ -70,11 +70,11 @@ let currentDevelopmentProcess = ref<{
       <li v-for="process in developmentProcess" :key="process.title">
         <div class="flex flex-row w-full md:contents items-center justify-between">
           <div class="group flex flex-col items-start md:items-center" @mouseover="() => (currentDevelopmentProcess = process)" @click="() => (currentDevelopmentProcess = process)">
-          <component :is="process.icon" class="h-6 w-6 md:h-8 md:w-8" :class="[currentDevelopmentProcess?.index == process.index ? 'text-accent' : 'text-primary']" />
+          <component :is="process.icon" class="h-6 w-6 md:h-8 md:w-8" :class="[currentDevelopmentProcess?.index == process.index ? 'text-flair' : 'text-accent']" />
           <h3 class="text-md md:text-lg xl:text-xl">{{ process.title }}</h3>
-          <div class="hidden md:block mb-1.5 h-1 w-full rounded-full" :class="[currentDevelopmentProcess?.index == process.index? 'bg-accent' : 'bg-transparent']"></div>
+          <div class="hidden md:block mb-1.5 h-1 w-full rounded-full" :class="[currentDevelopmentProcess?.index == process.index? 'bg-flair' : 'bg-transparent']"></div>
         </div>
-          <ChevronRightIcon class="md:hidden w-5"  :class="[currentDevelopmentProcess?.index ==  process.index ? 'text-accent' : 'text-transparent']"/>
+          <ChevronRightIcon class="md:hidden w-5"  :class="[currentDevelopmentProcess?.index ==  process.index ? 'text-flair' : 'text-transparent']"/>
         </div>
         
       </li>
@@ -114,7 +114,7 @@ let currentDevelopmentProcess = ref<{
         <component
           v-if="industry.icon"
           :is="industry.icon"
-          class="mx-auto h-12 w-12 text-primary"
+          class="mx-auto h-12 w-12 text-flair"
         />
         <div>
           <h3

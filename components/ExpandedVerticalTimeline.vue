@@ -14,58 +14,58 @@ let currentStepIndex = ref(0);
       <template v-if="index < currentStepIndex">
         <div
           v-if="index !== steps.length - 1"
-          class="absolute left-4 top-4 -ml-px mt-0.5 h-full w-0.5 bg-black"
+          class="absolute left-4 top-4 -ml-px mt-0.5 h-full w-0.5 bg-accent"
           aria-hidden="true"
         />
         <div class="group relative flex items-center" @mouseover="() => currentStepIndex = index">
           <span class="flex h-9 items-center">
             <span
-              class="relative z-10 flex h-8 w-8 items-center justify-center rounded-full bg-black group-hover:bg-gray-500"
+              class="relative z-10 flex h-8 w-8 items-center justify-center rounded-full bg-accent group-hover:bg-primary"
             >
               <div class="h-5 w-5" />
             </span>
           </span>
 
           <span class="ml-4 flex min-w-0 flex-col">
-            <span class="text-sm font-medium">{{ step }}</span>
+            <span>{{ step }}</span>
           </span>
         </div>
       </template>
       <template v-else-if="index == currentStepIndex">
         <div
           v-if="index !== steps.length - 1"
-          class="absolute left-4 top-4 -ml-px mt-0.5 h-full w-0.5 bg-gray-300"
+          class="absolute left-4 top-4 -ml-px mt-0.5 h-full w-0.5 bg-primary"
           aria-hidden="true"
         ></div>
         <div class="group relative flex items-center" @mouseover="() => currentStepIndex = index">
           <span class="flex h-9 items-center" aria-hidden>
             <span
-              class="relative z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-indigo-600 bg-white"
+              class="relative z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-accent bg-custom-white"
             >
-              <span class="h-2.5 w-2.5 rounded-full bg-indigo-600" />
+              <span class="h-4 w-4 rounded-full bg-accent" />
             </span>
           </span>
           <span class="ml-4 flex min-w-0 flex-col">
-            <span class="text-sm font-medium">{{ step }}</span>
+            <span>{{ step }}</span>
           </span>
         </div>
       </template>
       <template v-else>
         <div
           v-if="index !== steps.length - 1"
-          class="absolute left-4 top-4 -ml-px mt-0.5 h-full w-0.5 bg-gray-300"
+          class="absolute left-4 top-4 -ml-px mt-0.5 h-full w-0.5 bg-primary"
           aria-hidden
         />
         <div class="group relative flex items-center" @mouseover="() => currentStepIndex = index">
           <span class="flex h-9 items-center" aria-hidden>
             <span
-              class="relative z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-black bg-white"
+              class="relative z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-primary bg-custom-white"
             >
               <span class="h-2.5 w-2.5 rounded-full bg-transparent" />
             </span>
           </span>
           <span class="ml-4 flex min-w-0 flex-col">
-            <span class="text-sm font-medium">{{ step }}</span>
+            <span>{{ step }}</span>
           </span>
         </div>
       </template>

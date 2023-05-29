@@ -31,9 +31,9 @@ import { expertises, benefits, useCases, FAQs } from "@/data/services/CVData";
       Our computer vision software development team builds custom solutions for
       varied use cases
     </p>
-    <ul class="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-x-12 py-12 max-w-7xl mx-auto">
-      <li v-for="expertise in expertises" :key="expertise.title" class="flex flex-col items-center justify-center">
-        <component :is="expertise.svg" v-if="expertise.svg != ''" class="w-16 h-16 mx-auto text-primary"></component>
+    <ul class="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-px drop-shadow md:bg-primary max-w-7xl mx-auto">
+      <li v-for="expertise in expertises" :key="expertise.title" class="flex flex-col items-center justify-center bg-custom-white p-6">
+        <component :is="expertise.svg" v-if="expertise.svg != ''" class="w-16 h-16 mx-auto text-flair"></component>
         <h3 class="text-lg xl:text-xl 2xl:text-2xl text-center">
           {{ expertise.title }}
         </h3>
@@ -46,7 +46,30 @@ import { expertises, benefits, useCases, FAQs } from "@/data/services/CVData";
 
   <responsive-section>
     <h2 class="text-center text-2xl pb-8 2xl:pb-16 2xl:text-3xl">Benefits</h2>
-    <ul class="grid gap-6 max-w-7xl mx-auto">
+    <ul class="hidden xl:grid xl:grid-cols-12 max-w-7xl mx-auto gap-12 ">
+      <li class="contents" v-for="benefit in benefits" :key="benefit.title">
+        <div class="col-span-4">
+          <h3 class="text-lg xl:text-xl 2xl:text-2xl text-right uppercase">
+          {{ benefit.title }}
+        </h3>
+        <div class="h-0.5 w-full bg-primary ml-auto"></div>
+        </div>
+        
+        <div class="col-span-8">
+        <p class="text-md xl:text-lg 2xl:text-xl">
+          {{ benefit.body }}
+        </p>
+        <h4 class="text-md xl:text-lg 2xl:text-xl font-medium text-center">Key Benefits:</h4>
+        <ul class="flex flex-col items-center">
+          <li v-for="subBenefit in benefit.subBenefits" :key="subBenefit" class="text-md xl:text-lg 2xl:text-xl list-disc list-inside">
+            {{ subBenefit }}
+          </li>
+        </ul>
+      </div>
+      </li>
+    </ul>
+
+    <ul class="flex flex-col gap-6 max-w-7xl mx-auto xl:hidden">
       <li v-for="benefit in benefits" :key="benefit.title">
         <h3 class="text-lg xl:text-xl 2xl:text-2xl text-center uppercase">
           {{ benefit.title }}
@@ -66,19 +89,17 @@ import { expertises, benefits, useCases, FAQs } from "@/data/services/CVData";
 
   <responsive-section>
     <h2 class="text-center text-2xl pb-8 2xl:pb-16 2xl:text-3xl">Use Cases</h2>
-    <ul class="flex flex-col gap-12 xl:grid xl:grid-cols-2 max-w-7xl mx-auto">
+    <ul class="flex flex-col gap-6 xl:grid xl:gap-px xl:bg-primary drop-shadow xl:grid-cols-2 max-w-7xl mx-auto">
       <li
         v-for="useCase in useCases"
         :key="useCase.title"
-        class="flex flex-col"
+        class="flex flex-col p-6 bg-custom-white"
       >
         
           <h3 class="text-lg xl:text-xl uppercase font-medium text-center">
             {{ useCase.title }}
           </h3>
-          <p class="text-md xl:text-lg 2xl:text-xl">
-            {{ useCase.body }}
-          </p>
+          <p class="text-md xl:text-lg 2xl:text-xl list-disc" v-html="useCase.htmlBody" />
       </li>
     </ul>
   </responsive-section>

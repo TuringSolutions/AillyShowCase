@@ -33,6 +33,12 @@ const WhyChooseUs : Array<{
         description:
           "Our focus is on compelling results. We build our solutions to address your unique requirements and business-specific challenges.",
       },
+      {
+        svgLink: "",
+        title: "Extended Maintenance and Support",
+        description: 
+        "Our maintenance and support team will help you maintain and scale your products as your requirements change with time."
+      }
 ]
 
 export {WhyChooseUs}

@@ -19,7 +19,8 @@ const logoColor = "#91f2e8";
 </script>
 
 <template>
-  <HeroSection class="h-fullscreen bg-custom-white text-custom-black">
+  <HeroSection class="h-fullscreen text-custom-black">
+    
     <div class="flex flex-col">
       <h1 class="pb-2 text-3xl md:text-4xl xl:text-6xl 2xl:pb-4 2xl:text-8xl">
         Big on Data Science & AI
@@ -77,7 +78,7 @@ const logoColor = "#91f2e8";
       How we can help you
     </h2>
     <ul
-      class="grid items-center justify-center gap-0.5 bg-primary text-center drop-shadow 2xl:grid-cols-2"
+      class="grid items-center justify-center gap-px bg-primary text-center drop-shadow 2xl:grid-cols-2"
     >
       <li
         v-for="helpCase in HelpCases"
@@ -231,7 +232,7 @@ const logoColor = "#91f2e8";
     </ul>
 
     <ul
-      class="mx-auto hidden my-6 md:grid md:grid-cols-2 md:gap-0.5 md:bg-primary md:drop-shadow"
+      class="mx-auto hidden my-6 md:grid md:grid-cols-2 md:gap-px md:bg-primary md:drop-shadow"
     >
       <li
         v-for="(industry, index) in Industries"

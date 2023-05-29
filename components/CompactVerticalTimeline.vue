@@ -15,7 +15,7 @@ let currentIndex = ref<number>(0);
             class="relative flex h-5 w-5 flex-shrink-0 items-center justify-center"
           >
             <CheckCircleIcon
-              class="h-full w-full"
+              class="h-full w-full text-accent"
               aria-hidden
             ></CheckCircleIcon>
           </span>
@@ -26,8 +26,8 @@ let currentIndex = ref<number>(0);
             class="relative flex h-5 w-5 flex-shrink-0 items-center justify-center"
             aria-hidden
           >
-            <span class="absolute h-4 w-4 rounded-full" />
-            <span class="relative block h-2 w-2 rounded-full" />
+            <span class="absolute h-4 w-4 rounded-full border-primary" />
+            <span class="relative block h-2 w-2 rounded-full bg-primary" />
           </span>
           <span class="ml-3">{{ event }}</span>
         </span>
@@ -35,7 +35,7 @@ let currentIndex = ref<number>(0);
           <span
             class="relative flex h-5 w-5 flex-shrink-0 items-center justify-center"
           >
-            <span class="h-2 w-2 rounded-full" />
+            <span class="h-2 w-2 rounded-full bg-accent" />
           </span>
           <span class="ml-3"> {{ event }}</span>
         </span>

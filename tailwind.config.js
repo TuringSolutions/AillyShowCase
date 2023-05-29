@@ -14,7 +14,8 @@ module.exports = {
         "custom-white": "#fafafa",
         "custom-black": "#030712",
         "primary": "#38bdf8",
-        "accent": "#9333ea"
+        "accent": "#9333ea",
+        "flair":"#f44336"
       },
     },
   },

@@ -37,26 +37,32 @@ const NavItems: Array<NavItem> = [
     description: "",
     logo: "",
     children: [
-      {id: "Web Development",
-    description: "",
-  logo: "",
-url: "/services/webdev"}
-    ]
+      {
+        id: "Web Development",
+        description: "",
+        logo: "",
+        url: "/services/webdev",
+      },
+    ],
   },
   {
     id: "About Us",
     description: "",
     logo: "",
-    url: "/about"
-  }
+    url: "/about",
+  },
 ];
 
 const isNavItemValid = (item: NavItem): boolean => {
-  return item.children?.some((x: NavItem) => isNavItemValid(x)) || item.url !== "";
+  return (
+    item.children?.some((x: NavItem) => isNavItemValid(x)) || item.url !== ""
+  );
 };
 
-const hasValidChildren = (item : NavItem) : boolean => {
-  return item.children?.some((child: NavItem) => isNavItemValid(child)) || false
-}
+const hasValidChildren = (item: NavItem): boolean => {
+  return (
+    item.children?.some((child: NavItem) => isNavItemValid(child)) || false
+  );
+};
 
-export {NavItems, isNavItemValid, hasValidChildren}
+export { NavItems, isNavItemValid, hasValidChildren };

@@ -29,8 +29,8 @@ import { UserCircleIcon } from "@heroicons/vue/20/solid";
   </ResponsiveSection>
 
   <ResponsiveSection>
-    <ul class="grid grid-cols-1 text-center md:grid-cols-2 xl:grid-cols-4">
-      <li class="flex flex-col items-center gap-2 px-6 py-10 outline outline-1">
+    <ul class="grid grid-cols-1 text-center md:grid-cols-2 xl:grid-cols-4 bg-primary gap-px drop-shadow">
+      <li class="flex flex-col items-center gap-2 px-6 py-10 bg-custom-white">
         <h3 class="text-xl font-medium">Employees</h3>
         <h2 class="text-center text-2xl 2xl:text-3xl">80</h2>
         <h4 class="text-md font-medium xl:text-lg">We are</h4>
@@ -39,7 +39,7 @@ import { UserCircleIcon } from "@heroicons/vue/20/solid";
         </p>
         <p>Learn More ></p>
       </li>
-      <li class="flex flex-col items-center gap-2 px-6 py-10 outline outline-1">
+      <li class="flex flex-col items-center gap-2 px-6 py-10 bg-custom-white">
         <h3 class="text-xl font-medium">Projects Delivered</h3>
         <h2 class="text-center text-2xl 2xl:text-3xl">150</h2>
         <h4 class="text-md font-medium xl:text-lg">Clients Geography</h4>
@@ -48,7 +48,7 @@ import { UserCircleIcon } from "@heroicons/vue/20/solid";
         </p>
         <p>Learn More ></p>
       </li>
-      <li class="flex flex-col items-center gap-2 px-6 py-10 outline outline-1">
+      <li class="flex flex-col items-center gap-2 px-6 py-10 bg-custom-white">
         <h3 class="text-xl font-medium">Key Industries</h3>
         <h2 class="text-center text-2xl 2xl:text-3xl">5+</h2>
         <h4 class="text-md font-medium xl:text-lg">Industry Focus</h4>
@@ -57,7 +57,7 @@ import { UserCircleIcon } from "@heroicons/vue/20/solid";
           Digital Health IoT
         </p>
       </li>
-      <li class="flex flex-col items-center gap-2 px-6 py-10 outline outline-1">
+      <li class="flex flex-col items-center gap-2 px-6 py-10 bg-custom-white">
         <h3 class="text-xl font-medium">Locations</h3>
         <h2 class="text-center text-2xl 2xl:text-3xl">3</h2>
         <h4 class="text-md font-medium xl:text-lg">Our Offices</h4>
@@ -93,16 +93,11 @@ import { UserCircleIcon } from "@heroicons/vue/20/solid";
     <h2 class="pb-8 text-center text-2xl 2xl:pb-16 2xl:text-3xl">
       Why Clients Choose Us
     </h2>
-    <ul class="grid grid-cols-1 xl:grid-cols-3 gap-5 max-w-7xl mx-auto">
+    <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-px bg-primary max-w-7xl mx-auto drop-shadow">
       <li v-for="(reason, index) in WhyChooseUs" :key="reason.title"
-      :class="[index == 0 ? 'xl:col-start-1':
-       index == 1? 'xl:col-start-3':
-       index == 2? 'xl:col-start-2':
-       index == 3? 'xl:col-start-1':
-       index == 4 ? 'xl:col-start-3' : '']"  
-      class="flex flex-col">
+      class="flex flex-col bg-custom-white p-6">
         <h3 class="text-center text-md xl:text-lg 2xl:text-xl font-medium" >{{ reason.title }}</h3>
-        <div class="h-0.5 bg-primary"></div>
+        <div class="h-0.5 bg-accent"></div>
         <p class="text-justify text-md xl:text-lg 2xl:text-xl">{{ reason.description }}</p>
       </li>
     </ul>
