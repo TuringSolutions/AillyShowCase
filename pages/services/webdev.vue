@@ -8,13 +8,13 @@ import { Features, AIFeatures, SiteTypes } from "@/data/services/WebDev";
       Web Development
     </h1>
     <p class="max-w-5xl text-xl xl:text-3xl">
-      Bespoke static websites and web applications to match your vision
+      Bespoke websites and web applications to match your vision
     </p>
   </HeroSection>
 
   <ResponsiveSection>
     <p class="text-md xl:text-lg 2xl:text-xl">
-      We design, develop and deliver bespoke websites and applications for
+      We design, develop and deliver websites and applications customized for
       enterprise, startups and personal needs. With the right strategy, design,
       and storytelling, we have worked on impactful websites for lifestyle
       brands to tech, startups to venture capitalists, professional services to
