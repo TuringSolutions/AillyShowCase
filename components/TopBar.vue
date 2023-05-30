@@ -10,7 +10,7 @@ const emits = defineEmits<{ (e: "hamburgerIconClick"): void }>();
   <div>
     <ResponsiveSection no-default-padding class="px-12 xl:px-4">
       <div class="flex flex-row items-center justify-between">
-        <div class="flex flex-row">
+        <NuxtLink to="/" class="flex flex-row">
           <component
             is="brand-nameplate"
             class="hidden h-16 py-2 text-custom-black md:block"
@@ -19,7 +19,7 @@ const emits = defineEmits<{ (e: "hamburgerIconClick"): void }>();
             is="brand-logo"
             class="h-16 py-2 text-custom-black md:hidden"
           />
-        </div>
+      </NuxtLink>
 
         <nav class="text-custom-black md:hidden">
           <bars-3-icon
@@ -66,8 +66,9 @@ const emits = defineEmits<{ (e: "hamburgerIconClick"): void }>();
                         <NuxtLink
                           :to="childNav.url"
                           @click="() => close()"
-                          class="block p-2"
+                          class="flex flex-row items-center gap-3 p-3"
                         >
+                          <component :is="childNav.logo" class="h-6 w-6 text-custom-black" />
                           <span>{{ childNav.id }}</span>
                         </NuxtLink>
                       </li>

@@ -21,13 +21,13 @@ const NavItems: Array<NavItem> = [
       {
         id: "Computer Vision",
         description: "",
-        logo: "",
+        logo: "eye",
         url: "/services/cv",
       },
       {
         id: "Software Development",
         description: "",
-        logo: "",
+        logo: "globe",
         url: "/services/softwaredev",
       },
     ],
@@ -40,7 +40,7 @@ const NavItems: Array<NavItem> = [
       {
         id: "Web Development",
         description: "",
-        logo: "",
+        logo: "code-square",
         url: "/services/webdev",
       },
     ],
@@ -51,6 +51,12 @@ const NavItems: Array<NavItem> = [
     logo: "",
     url: "/about",
   },
+  {
+    id: "Contact",
+    description: "",
+    logo: "",
+    url: "/contact"
+  }
 ];
 
 const isNavItemValid = (item: NavItem): boolean => {

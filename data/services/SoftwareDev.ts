@@ -51,17 +51,17 @@ const expertises: Array<{
   },
 ];
 
-const timelineEvents: Array<string> = [
-  "Become data-driven business",
-  "Enhance customer experience",
-  "Predict customer churn",
-  "Mitigate business risks",
-  "Forecast future trends",
-  "Improve work efficiency",
-  "Simplify data management",
-  "Increase revenues",
-  "Cut down costs",
-  "Improve strategic decision making",
+const timelineEvents: Array<{title:string, body:string}> = [
+  {title: "Become data-driven business", body: "Use data to empower your business decisions."},
+  {title: "Improve strategic decision making", body: "AI tools help avoid biases in decisions, pull insights out of oceans of data, and make strategic choices quickly."},
+  {title: "Enhance customer experience", body: "Use AI to supercharge the customer experience at every stage of the user's journey."},
+  {title: "Predict customer churn", body: "Apply cutting edge algorithms to predict customers who are at a high risk of leaving based on behaviour."},
+  {title: "Mitigate business risks", body: "Predict imminent business threats and devise strategies to prepare for them."},
+  {title: "Forecast future trends", body: "Use past and current data to identify and analyse future trends to make better business decisions."},
+  {title: "Improve work efficiency", body: "Customized AI tools can now assist human employees with data-oriented tasks."},
+  {title: "Simplify data management", body: "By automating intelligent management, we can now simplify data management and integrate assets."},
+  {title: "Increase revenues", body: "Holistic improvement in all aspects of business will help in increased revenues."},
+  {title: "Cut down costs", body: "Proper risk management and deploying well-tested strategies ensure minimization of costs. "}
 ];
 
 const industries: Array<{ title: string; body: string; icon?: string }> = [

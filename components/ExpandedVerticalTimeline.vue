@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{ steps: Array<string> }>();
+defineProps<{ steps: Array<{title: string, body: string}> }>();
 let currentStepIndex = ref(0);
 </script>
 
@@ -7,7 +7,7 @@ let currentStepIndex = ref(0);
   <ol role="list" class="overflow-hidden">
     <li
       v-for="(step, index) in steps"
-      :key="step"
+      :key="step.title"
       :class="[index !== steps.length - 1 ? 'pb-10' : '']"
       class="relative"
     >
@@ -27,7 +27,8 @@ let currentStepIndex = ref(0);
           </span>
 
           <span class="ml-4 flex min-w-0 flex-col">
-            <span>{{ step }}</span>
+            <span>{{ step.title }}</span>
+            <span>{{ step.body }}</span>
           </span>
         </div>
       </template>
@@ -46,7 +47,8 @@ let currentStepIndex = ref(0);
             </span>
           </span>
           <span class="ml-4 flex min-w-0 flex-col">
-            <span>{{ step }}</span>
+            <span>{{ step.title }}</span>
+            <span>{{ step.body }}</span>
           </span>
         </div>
       </template>
@@ -65,7 +67,8 @@ let currentStepIndex = ref(0);
             </span>
           </span>
           <span class="ml-4 flex min-w-0 flex-col">
-            <span>{{ step }}</span>
+            <span>{{ step.title }}</span>
+            <span>{{ step.body }}</span>
           </span>
         </div>
       </template>
