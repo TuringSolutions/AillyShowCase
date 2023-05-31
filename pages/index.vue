@@ -173,7 +173,7 @@ useSeoMeta({
           </div>
         </li>
       </ul>
-      <ul class="flex h-64 flex-col justify-center overflow-scroll p-4">
+      <ul class="flex h-64 flex-col justify-center p-4">
         <template v-if="currentAWSUseCase !== null">
           <li
             v-for="subCase in currentAWSUseCase?.caseBody"
