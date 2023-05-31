@@ -19,31 +19,33 @@ const emits = defineEmits<{ (e: "hamburgerIconClick"): void }>();
             is="brand-logo"
             class="h-16 py-2 text-custom-black md:hidden"
           />
-      </NuxtLink>
+        </NuxtLink>
 
-        <nav class="text-custom-black md:hidden">
+        <nav class="text-custom-black lg:hidden">
           <bars-3-icon
             class="h-12 py-2"
             @click="() => $emit('hamburgerIconClick')"
           />
         </nav>
 
-        <nav class="hidden items-stretch text-custom-black md:flex">
-          <ul
-            class="flex h-full flex-row items-center justify-between gap-3 xl:gap-6"
-          >
+        <nav class="hidden text-custom-black lg:flex">
+          <ul class="flex flex-row items-center justify-between gap-6 xl:gap-8">
             <li v-for="navItem in NavItems">
               <popover
                 v-if="hasValidChildren(navItem)"
                 class="relative"
                 v-slot="{ open }"
               >
-                <popover-button class="inline-flex flex-row hover:text-accent">
-                  <span>{{ navItem.id }}</span>
-                  <chevron-down-icon
-                    class="h-6 w-6 transition-transform ease-in-out"
-                    :class="{ 'rotate-180': open }"
-                  />
+                <popover-button
+                  class="inline-flex flex-row items-center gap-1 hover:text-accent"
+                >
+                  <span class="inline-flex flex-row">
+                    <span>{{ navItem.id }}</span>
+                    <chevron-down-icon
+                      class="h-6 w-6 transition-transform ease-in-out"
+                      :class="{ 'rotate-180': open }"
+                    />
+                  </span>
                 </popover-button>
                 <transition
                   enter-active-class="transition duration-100 ease-out"
@@ -55,7 +57,7 @@ const emits = defineEmits<{ (e: "hamburgerIconClick"): void }>();
                 >
                   <popover-panel
                     v-slot="{ close }"
-                    class="absolute right-0 mt-5 w-60 min-w-max bg-slate-300"
+                    class="absolute right-0 mt-4 w-60 min-w-max bg-slate-50 shadow-lg outline outline-2 outline-slate-200 drop-shadow"
                   >
                     <ul class="flex flex-col items-stretch">
                       <li
@@ -68,7 +70,10 @@ const emits = defineEmits<{ (e: "hamburgerIconClick"): void }>();
                           @click="() => close()"
                           class="flex flex-row items-center gap-3 p-3"
                         >
-                          <component :is="childNav.logo" class="h-6 w-6 text-custom-black" />
+                          <component
+                            :is="childNav.logo"
+                            class="h-6 w-6 text-flair"
+                          />
                           <span>{{ childNav.id }}</span>
                         </NuxtLink>
                       </li>
@@ -77,8 +82,13 @@ const emits = defineEmits<{ (e: "hamburgerIconClick"): void }>();
                 </transition>
               </popover>
               <button v-else>
-                <nuxt-link class="hover:text-accent" :to="navItem.url">
-                  {{ navItem.id }}
+                <nuxt-link
+                  class="inline-flex flex-row items-center gap-1 hover:text-accent"
+                  :to="navItem.url"
+                >
+                  <span>
+                    {{ navItem.id }}
+                  </span>
                 </nuxt-link>
               </button>
             </li>

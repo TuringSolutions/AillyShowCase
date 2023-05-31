@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { expertises, benefits, useCases, FAQs } from "@/data/services/CVData";
+
+useSeoMeta({
+  title: "👁 Computer Vision | Ailly Solutions"
+})
 </script>
 
 <template>

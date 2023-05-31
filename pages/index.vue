@@ -16,6 +16,10 @@ import {
 
 let currentAWSUseCase = ref<AWSUseCase>(AWSUseCases[0]);
 const logoColor = "#91f2e8";
+
+useSeoMeta({
+  title: "🏠 Home | Ailly Solutions"
+})
 </script>
 
 <template>

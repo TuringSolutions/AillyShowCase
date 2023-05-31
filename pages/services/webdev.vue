@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { Features, AIFeatures, SiteTypes } from "@/data/services/WebDev";
+useSeoMeta({
+  title: "🌎 Web Development | Ailly Solutions"
+})
 </script>
 
 <template>

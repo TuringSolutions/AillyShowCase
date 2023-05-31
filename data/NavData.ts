@@ -10,13 +10,13 @@ const NavItems: Array<NavItem> = [
   {
     id: "Home",
     description: "",
-    logo: "",
+    logo: "house",
     url: "/",
   },
   {
     id: "AI Services",
     description: "",
-    logo: "",
+    logo: "boxes",
     children: [
       {
         id: "Computer Vision",
@@ -35,7 +35,7 @@ const NavItems: Array<NavItem> = [
   {
     id: "General Services",
     description: "",
-    logo: "",
+    logo: "columns-gap",
     children: [
       {
         id: "Web Development",
@@ -48,13 +48,13 @@ const NavItems: Array<NavItem> = [
   {
     id: "About Us",
     description: "",
-    logo: "",
+    logo: "person-square",
     url: "/about",
   },
   {
     id: "Contact",
     description: "",
-    logo: "",
+    logo: "chat-right",
     url: "/contact"
   }
 ];

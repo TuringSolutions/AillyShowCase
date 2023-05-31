@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { WhyChooseUs } from "@/data/AboutData";
 import { UserCircleIcon } from "@heroicons/vue/20/solid";
+
+useSeoMeta({
+  title: "👋 About Us | Ailly Solutions"
+})
 </script>
 
 <template>

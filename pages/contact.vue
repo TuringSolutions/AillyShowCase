@@ -6,6 +6,9 @@ import {
   UserIcon,
 } from "@heroicons/vue/20/solid";
 
+useSeoMeta({
+  title: "📩 Contact Us | Ailly Solutions"
+})
 </script>
 
 <template>

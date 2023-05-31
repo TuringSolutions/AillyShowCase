@@ -14,6 +14,10 @@ let currentDevelopmentProcess = ref<{
   tasks: Array<string>;
   icon: any;
 }>( developmentProcess[0]);
+
+useSeoMeta({
+  title:"🧠 AI Software Development | Ailly Solutions"
+})
 </script>
 
 <template>
