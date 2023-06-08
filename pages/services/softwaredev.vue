@@ -109,11 +109,11 @@ useSeoMeta({
       reach a new level. And we keep on enhancing our expertise across domains
       with AI algorithms.
     </p>
-    <ul class="mx-auto grid max-w-7xl grid-flow-row gap-12 xl:grid-cols-3">
+    <ul class="mx-auto grid grid-flow-row gap-px xl:grid-cols-3 bg-primary max-w-7xl drop-shadow">
       <li
         v-for="industry in industries"
         :key="industry.title"
-        class="flex flex-col justify-start gap-4"
+        class="flex flex-col justify-start gap-4 p-12 bg-custom-white"
       >
         <component
           v-if="industry.icon"

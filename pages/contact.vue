@@ -9,6 +9,8 @@ import {
 useSeoMeta({
   title: "📩 Contact Us | Ailly Solutions"
 })
+
+
 </script>
 
 <template>
@@ -26,7 +28,7 @@ useSeoMeta({
     <p class="pb-12 text-center mx-auto text-md xl:text-lg 2xl:text-xl">
         Fill up the following form outlining your queries and we will get back to you shortly.
     </p>
-    <form class="mx-auto grid max-w-7xl grid-cols-12 gap-6">
+    <form class="mx-auto grid max-w-7xl grid-cols-12 gap-6" name="contact" method="POST" data-netlify="true">
       <div class="col-span-12 flex xl:col-span-5 xl:col-start-1">
         <div
           class="flex aspect-square items-center justify-center bg-custom-black"
@@ -92,7 +94,7 @@ useSeoMeta({
         />
       </div>
       <div class="col-span-12 col-start-1">
-        <custom-button class="w-full p-2 text-lg">Submit</custom-button>
+        <custom-button class="w-full p-2 text-lg" type="submit">Submit</custom-button>
       </div>
     </form>
   </ResponsiveSection>

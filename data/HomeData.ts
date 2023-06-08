@@ -175,7 +175,7 @@ const Industries : Array<{title: string, body: string, url: string, icon: string
     icon: "cash-coin"
   },
   {
-    title: "Non on this list?",
+    title: "Not on this list?",
     body: "We are always expanding our reach to newer industries, and honestly, this list cannot keep up. Contact us for a free consultation to know if we can help with a project from your industry. ",
     url: "",
     icon: "plus-circle"

@@ -18,13 +18,13 @@ let currentAWSUseCase = ref<AWSUseCase>(AWSUseCases[0]);
 const logoColor = "#91f2e8";
 
 useSeoMeta({
-  title: "🏠 Home | Ailly Solutions"
-})
+  title: "🏠 Home | Ailly Solutions",
+});
 </script>
 
 <template>
   <HeroSection class="h-fullscreen text-custom-black">
-    
+    <template #background-slot> </template>
     <div class="flex flex-col">
       <h1 class="pb-2 text-3xl md:text-4xl xl:text-6xl 2xl:pb-4 2xl:text-8xl">
         Big on Data Science & AI
@@ -49,7 +49,7 @@ useSeoMeta({
     <custom-button
       class="mt-24 p-4 text-xl font-medium xl:p-6 xl:text-2xl 2xl:text-3xl"
     >
-      Book a free consultation
+      <NuxtLink to="/contact"> Book a free consultation </NuxtLink>
     </custom-button>
   </HeroSection>
 
@@ -211,7 +211,7 @@ useSeoMeta({
     <h2 class="pb-8 text-center text-2xl 2xl:pb-16 2xl:text-3xl">
       Industries we are transforming
     </h2>
-    <p class="text-md text-center xl:text-lg 2xl:text-xl mx-auto">
+    <p class="text-md mx-auto text-center xl:text-lg 2xl:text-xl">
       Take a look at examples of our work and learn how our clients from
       different industries have benefited from our data science consulting
       services.
@@ -236,13 +236,13 @@ useSeoMeta({
     </ul>
 
     <ul
-      class="mx-auto hidden my-6 md:grid md:grid-cols-2 md:gap-px md:bg-primary md:drop-shadow"
+      class="mx-auto my-6 hidden md:grid md:grid-cols-2 md:gap-px md:bg-primary md:drop-shadow"
     >
       <li
         v-for="(industry, index) in Industries"
         :key="industry.title"
         :class="index == Industries.length - 1 ? 'col-span-2' : ''"
-        class="px-8 py-3 bg-custom-white"
+        class="bg-custom-white px-8 py-3"
       >
         <component
           :is="industry.icon"

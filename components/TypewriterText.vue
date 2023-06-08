@@ -27,7 +27,6 @@ const typeText = () => {
     typeStatus.value = true;
     typedValue.value += displayText.value.charAt(charIndex.value);
     charIndex.value += 1;
-    console.log(displayText.value.charAt(charIndex.value));
     setTimeout(typeText, props.typingSpeed);
   } else {
     typeStatus.value = false;

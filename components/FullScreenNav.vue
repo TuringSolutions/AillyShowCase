@@ -8,7 +8,7 @@ const emits = defineEmits<{ (e: "closeMenu"): void }>();
 
 <template>
   <div class="flex h-full flex-col items-center justify-center text-custom-black">
-    <nuxt-link to="/">
+    <nuxt-link to="/" @click="() => $emit('closeMenu')">
     <component is="brand-logo" class="mb-12 h-16" />
     </nuxt-link>
     <nav>
@@ -38,7 +38,7 @@ const emits = defineEmits<{ (e: "closeMenu"): void }>();
                   >
                     <NuxtLink
                       :to="childNav.url"
-                      @click="() => close()"
+                      @click="() => $emit('closeMenu')"
                       class="flex flex-row items-center gap-3 p-3"
                     >
                       <component
@@ -54,7 +54,7 @@ const emits = defineEmits<{ (e: "closeMenu"): void }>();
           </popover>
 
           <button v-else>
-            <nuxt-link class="hover:text-accent" :to="item.url">
+            <nuxt-link class="hover:text-accent" :to="item.url" @click="() => $emit('closeMenu')">
               <span>{{ item.id }}</span>
             </nuxt-link>
           </button>
